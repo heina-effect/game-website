@@ -1,6 +1,7 @@
 import React, {ReactElement} from "react";
 import GameCard from "components/GameCard";
 import {Game} from "types";
+import {List, ListItem} from "./styles";
 
 
 interface Props {
@@ -16,15 +17,15 @@ const GameList = ({err, games} : Props) : ReactElement => {
     return <p>사용가능한 게임이 없습니다. (No games available) </p>
   }
   return (
-    <ul>
+    <List>
       {games.map(game => {
         return (
-          <li key={game.id}>
+          <ListItem key={game.id}>
               <GameCard content={game} />
-          </li>
+          </ListItem>
         )
       })}
-    </ul>
+    </List>
   )
 }
 export default GameList;
