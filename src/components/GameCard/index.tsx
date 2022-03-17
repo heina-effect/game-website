@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import windowsIcon from "assets/icons/windows.svg"
 import browserIcon from "assets/icons/browser.svg";
 import { Game } from "types";
-import { StyledLink, Img, Title, Details, Description, Genre, } from "./style"
+import { StyledLink, Img, Title, Details, Description, Genre, Icon, } from "./style"
 import { BROWSER, WINDOWS} from "./constants"
 
 interface Props {
@@ -15,10 +15,10 @@ const GameCard = ({ content }: Props): ReactElement => {
     let icon = null;
     switch(p.trim()) {
         case BROWSER:
-          icon = <img key={`${id}-borwser`} alt="browser icon" src={browserIcon}/>
+          icon = <Icon key={`${id}-borwser`} alt="browser icon" src={browserIcon}/>
           break
         case WINDOWS:
-          icon = <img key={`${id}-windows`} alt="windows icon" src={windowsIcon}/>
+          icon = <Icon key={`${id}-windows`} alt="windows icon" src={windowsIcon}/>
           break
         default:
           break
