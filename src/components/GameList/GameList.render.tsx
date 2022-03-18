@@ -1,5 +1,6 @@
 import React, {ReactElement} from "react";
 import GameCard from "components/GameCard";
+import GameFilter from "components/GameFilter";
 import {Game} from "types";
 import {List, ListItem} from "./styles";
 
@@ -17,15 +18,18 @@ const GameList = ({err, games} : Props) : ReactElement => {
     return <p>사용가능한 게임이 없습니다. (No games available) </p>
   }
   return (
-    <List>
-      {games.map(game => {
-        return (
-          <ListItem key={game.id}>
-              <GameCard content={game} />
-          </ListItem>
-        )
-      })}
-    </List>
+    <>
+      <GameFilter />
+      <List>
+        {games.map(game => {
+          return (
+            <ListItem key={game.id}>
+                <GameCard content={game} />
+            </ListItem>
+          )
+        })}
+      </List>
+    </>
   )
 }
 export default GameList;
