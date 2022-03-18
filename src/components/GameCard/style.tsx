@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { breakpoints } from "style/breakpoint"
 import { Link } from "react-router-dom";
-import { backgroundColor, primaryColor, primaryTextColor, secondaryColor, secondaryTextColor, tertiaryTextColor } from "style/theme";
+import { backgroundColor, primaryTextColor, secondaryColor, secondaryTextColor, tertiaryTextColor } from "style/theme";
 
 export const StyledLink = styled(Link)`
   display: inline-block;
